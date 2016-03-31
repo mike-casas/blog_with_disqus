@@ -1,0 +1,20 @@
+<%= form_for @article do |f| %>
+
+<% if @article.errors.any? %>
+  <div id="error_explanation">
+  <div class="alert alert-danger">
+    The form contains <%= pluralize(@article.errors.count, "error") %>.
+  </div>
+    <ul>
+      <% @article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+  <%= f.label :Title, 'Title' %>
+  <%= f.text_field :title %>
+  <%= f.label :Description, "Description" %>
+  <%= f.text_area :description %>
+  <%= f.submit "enviar", :disable_with => 'enviaring...' %>
+<% end %>

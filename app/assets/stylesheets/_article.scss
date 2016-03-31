@@ -1,0 +1,34 @@
+.container_article{
+  width: 50%;
+  margin: 0 auto;
+  .data{
+    margin: 2em 0 0 0;
+  }
+  h1, .data{
+    text-align: center
+  }
+  hr{
+    text-align: center;
+    width: 4em;
+    border:0;
+    height: 2px;
+    border-top: 2px solid $hight-light;
+    padding: 1em;
+  }
+  #share_box{
+    text-align: center;
+    a{
+      cursor: pointer;
+      text-decoration: none;
+      color: $dark;
+      &:hover{
+      color: $hight-light;
+      }
+    }
+  }
+  .content{
+    text-align: justify;
+    padding-bottom: 3em
+  }
+}
+

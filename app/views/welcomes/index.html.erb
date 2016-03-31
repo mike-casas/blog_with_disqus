@@ -1,0 +1,28 @@
+<div class="wrapper clearfix wrapper_padding content_center">
+  <div class="col-1">
+    <h1>About</h1>
+    <hr>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem <a>sequi nesciunt</a>. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis susci</p>
+  </div>
+  <div class="col-2" >
+    <h1>Articles</h1>
+    <hr>
+    <% @articles.each do |article| %>
+    <p class="title">
+    <%= link_to article.title, article_path(article) %>
+    <a></a></p>
+    <p class="data "><%= article.created_at.strftime("%A, %b %d")  %></p>
+    <% end %>
+  </div>
+
+  <div class="col-3">
+    <h1>Projects</h1>
+    <hr>
+    <p><a>Sed ut perspiciatis unde omnis iste natus</a></p>
+    <p class="data">enero, 21- 2016</p>
+    <p><a>Sed ut perspiciatis unde omnis iste natus</a></p>
+    <p class="data">enero, 21- 2016</p>
+    <p><a>Sed ut perspiciatis unde omnis iste natus</a></p>
+    <p class="data">enero, 21- 2016</p>
+  </div>
+</div>

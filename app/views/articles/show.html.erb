@@ -1,0 +1,47 @@
+<div class="container_article">
+  <p class="data"><%= @article.created_at.strftime("%A, %b %d") %></p>
+  <h1><%= @article.title %></h1>
+  <hr>
+  <div class="content">
+    <%= markdown( @article.description) %>
+  </div>
+  <hr>
+  <div id="share_box">
+    <p>Share Article</p>
+    <!-- Twitter -->
+    <a onclick="javascript:window.open('http://twitter.com/share?text=<%= @article.title %> by @neneriostb - &amp;url=<%= url_for([@article, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a>
+    <!-- Facebook -->
+    <a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=<%= url_for([@article, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
+    <!-- Google Plus -->
+    <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@article, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus"></i></a>
+  </div>
+  <hr>
+
+  <div id="disqus_thread"></div>
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+
+var disqus_config = function () {
+this.page.url = '<%= url_for([@article, {only_path:false }]) %>';
+this.page.identifier = '<%= @article.id %>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.title= '<%= @article.title %>';
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//mike-blog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+<%= link_to "edit", edit_article_path(@article) %>
+
+<%= link_to "delete", article_path(@article), method: :delete, data: {confirm: "deseas eliminar"} %>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header id="main_navigation" class="clearfix">
+  <a href="#" class="name">Mike</a>
+  <nav>
+    <a href="#">Article</a>
+    <a href="#">Project</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<%= yield %>
+
+<footer>
+  <p>
+    &copy Mike
+  </p>
+  <nav>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-github"></i></a>
+  </nav>
+</footer>
+</body>
+</html>

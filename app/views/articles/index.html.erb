@@ -1,0 +1,9 @@
+
+
+<% @articles.each do |article| %>
+  <%= article.title %>
+  <%= article.created_at %>
+  <br>
+<% end %>
+<%= will_paginate @articles %>
+

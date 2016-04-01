@@ -1,3 +1,4 @@
+@import 'pygments';
 
 
 @import 'normalize';
@@ -118,5 +119,9 @@ footer{
   }
 }
 
+.pagination{
+  text-align: center
+}
+
+
 @import 'article';
-@import 'pygments';

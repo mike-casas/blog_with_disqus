@@ -32,3 +32,50 @@
   }
 }
 
+.articles_wrapper{
+  text-align: center;
+}
+//css pagination
+
+.pagination:before,
+.pagination:after{
+  content: " ";
+  display: table
+}
+
+.pagination:after{
+  clear: box;
+}
+
+.pagination{
+  text-align: center;
+  margin: 0 0 3em 0;
+  a, .previous_page, .current, .next_page{
+    padding: .75em 1em;
+    margin: 0 0.1em;
+    font-size: .7em;
+    text-decoration: none;
+    font-weight: 700;
+    background-color: #fff;
+    color: $dark;
+    border-radius: .15em;
+    font-style: normal;
+    &:hover{
+      color: #fff;
+      background: $hight-light;
+    }
+  }
+  .current{
+    background-color: $hight-light;
+    color: #fff;
+  }
+  .disabled{
+    color: #c0c0c0;
+    &:hover{
+      background: #fff;
+      color: #c0c0c0;
+    }
+  }
+}
+
+

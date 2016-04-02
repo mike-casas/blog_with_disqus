@@ -9,7 +9,9 @@
   </div>
   <hr>
 <% end %>
+<% if user_signed_in? %>
 <%= link_to 'New Article', new_article_path, id:"form_buttom"  %>
+<% end %>
 <%= will_paginate @articles %>
 </div>
 

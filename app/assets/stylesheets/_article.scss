@@ -125,15 +125,22 @@
   width: 90%;
   margin: 0 auto;
   label{
-    margin: 1em 7.5em;
+    margin: .3em 7.5em;
     text-transform: uppercase;
     text-align:justify;
   }
-  input{
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="submit"]
+   {
       border: 1px solid $light;
       border-radius: 0.2em;
       padding: .5em;
       width: 80%
+  }
+   input[type="checkbox"]{
+    text-align: justify;
   }
   textarea{
     width: 80%;
@@ -147,6 +154,14 @@
       display: block;
     }
   }
+  .form-checkbox{
+    text-align: justify;
+    margin: 0 7.5em 1em ;
+
+    label{
+      margin: 0
+    }
+  }
 }
 
 #form_buttom{
@@ -156,3 +171,4 @@
   border-radius: .2em;
   font-weight: 700
 }
+

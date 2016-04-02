@@ -78,4 +78,81 @@
   }
 }
 
+#principal_title{
+  text-align: center;
+  padding: 0.8em 0;
+  border-bottom: 1px solid
+}
+.wrapper_general{
+  text-align: center;
+  .title{
+    text-transform: uppercase;
+    padding: 0 0 .8em 0;
+    font-weight: 700;
+  }
+  a{
+    text-decoration: none;
+    color: $dark;
+  }
+  .date{
+    color: $light;
+  }
+  hr{
+    color: $hight-light;
+    width: 4em;
+    border:0;
+    border-bottom: 2px solid;
+    height: 2px;
+    margin: 1em auto;
+  }
+}
 
+#actions{
+  text-align:center;
+  border-bottom: 1px solid $light;
+  border-top: 1px solid $light;
+  padding: .7em 0;
+
+  a{
+    color: $light;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 1em
+  }
+}
+
+.form{
+  width: 90%;
+  margin: 0 auto;
+  label{
+    margin: 1em 7.5em;
+    text-transform: uppercase;
+    text-align:justify;
+  }
+  input{
+      border: 1px solid $light;
+      border-radius: 0.2em;
+      padding: .5em;
+      width: 80%
+  }
+  textarea{
+    width: 80%;
+    border: 1px solid $light;
+    border-radius: 0.2em;
+    height: 400px
+  }
+  .form-group{
+    margin: 2em 0;
+    label{
+      display: block;
+    }
+  }
+}
+
+#form_buttom{
+  background: $hight-light;
+  padding: .8em 2em;
+  color: #fff;
+  border-radius: .2em;
+  font-weight: 700
+}

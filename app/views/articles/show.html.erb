@@ -5,6 +5,11 @@
   <div class="content">
     <%= markdown( @article.description) %>
   </div>
+  <div id="actions">
+    <%= link_to "edit", edit_article_path(@article) %>
+
+    <%= link_to "delete", article_path(@article), method: :delete, data: {confirm: "deseas eliminar"} %>
+  </div>
   <hr>
   <div id="share_box">
     <p>Share Article</p>
@@ -42,6 +47,4 @@ s.setAttribute('data-timestamp', +new Date());
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 
-<%= link_to "edit", edit_article_path(@article) %>
 
-<%= link_to "delete", article_path(@article), method: :delete, data: {confirm: "deseas eliminar"} %>

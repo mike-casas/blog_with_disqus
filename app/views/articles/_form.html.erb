@@ -1,20 +1,28 @@
-<%= form_for @article do |f| %>
+<div class="form">
+  <%= form_for @article do |f| %>
 
-<% if @article.errors.any? %>
-  <div id="error_explanation">
-  <div class="alert alert-danger">
-    The form contains <%= pluralize(@article.errors.count, "error") %>.
-  </div>
-    <ul>
-      <% @article.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
-  <%= f.label :Title, 'Title' %>
-  <%= f.text_field :title %>
-  <%= f.label :Description, "Description" %>
-  <%= f.text_area :description %>
-  <%= f.submit "enviar", :disable_with => 'enviaring...' %>
-<% end %>
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+    <div class="alert alert-danger">
+      The form contains <%= pluralize(@article.errors.count, "error") %>.
+    </div>
+      <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="form-group">
+      <%= f.label :Title, 'Title' %>
+      <%= f.text_field :title %>
+    </div>
+    <div class="form-group">
+      <%= f.label :Description, "Description" %>
+      <%= f.text_area :description %>
+    </div>
+    <div class="form-group">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>
